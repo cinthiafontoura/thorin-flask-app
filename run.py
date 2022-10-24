@@ -14,7 +14,7 @@ def index():
 @app.route("/about")
 def about():
     data = []
-    with open("data/company.json", "r") as json_data:
+    with open("data/company.json", "r") as json_data:  # "r" stands for read only
         data = json.load(json_data)
     return render_template("about.html", page_title="About", company=data)
 
